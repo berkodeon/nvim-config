@@ -6,10 +6,10 @@ vim.keymap.set("n", "<C-e>", "<Cmd>Neotree toggle<CR>", { desc = "Open/close fil
 
 -- diagnostics
 vim.keymap.set("n", "gl", function()
-    vim.diagnostic.open_float()
+  vim.diagnostic.open_float()
 end, { desc = "Open Diagnostics in Float" })
 
 -- formatter
 vim.keymap.set("n", "<leader>cf", function()
-    require("conform").format({ lsp_format = "fallback" })
+  require("conform").format({ lsp_format = "fallback" })
 end, { desc = "[C]ode [F]ormat" })
