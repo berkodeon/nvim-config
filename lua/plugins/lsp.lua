@@ -202,6 +202,15 @@ return {
       -- clangd = {},
       -- gopls = {},
       -- pyright = {},
+      pylsp = {
+        plugins = {
+          pycodestyle = { enabled = false },
+          pyflakes = { enabled = false },
+          pylint = { enabled = false },
+          mccabe = { enabled = false },
+          rope_completion = { enabled = false },
+        },
+      },
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --

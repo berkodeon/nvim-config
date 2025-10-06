@@ -5,7 +5,7 @@ From environment to environment, I realized I reconfigure my neovim config and I
 - [X] Paranthesis matcher
 - [X] Add Pyton LSP
 - [X] Add Rust LSP
-- [] Python and Pyton debugger
+- [X] Python and Pyton debugger
 - [] Cloak
 - [] Zenmode
 
