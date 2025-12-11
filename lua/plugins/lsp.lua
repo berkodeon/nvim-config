@@ -202,6 +202,7 @@ return {
       -- clangd = {},
       -- gopls = {},
       -- pyright = {},
+      ruff = {},
       pylsp = {
         plugins = {
           pycodestyle = { enabled = false },
@@ -209,6 +210,10 @@ return {
           pylint = { enabled = false },
           mccabe = { enabled = false },
           rope_completion = { enabled = false },
+          ruff = {
+            enabled = true,
+            formatEnabled = true,
+          },
         },
       },
       -- rust_analyzer = {},
