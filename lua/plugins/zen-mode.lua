@@ -12,7 +12,6 @@ return {
       vim.wo.wrap = false
       vim.wo.number = true
       vim.wo.rnu = true
-      ColorMyPencils()
     end)
   end,
   desc = "[Z]en [Z]one",
