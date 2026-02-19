@@ -9,14 +9,20 @@ return {
     {
       "<leader>ff",
       function()
-        require("fzf-lua").files()
+        require("fzf-lua").files({
+          hidden = true,
+          no_ignore = true,
+        })
       end,
       desc = "Find Files in project directory",
     },
     {
       "<leader>fg",
       function()
-        require("fzf-lua").live_grep()
+        require("fzf-lua").live_grep({
+          hidden = true,
+          no_ignore = true,
+        })
       end,
       desc = "Find by grepping in project directory",
     },
