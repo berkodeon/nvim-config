@@ -7,11 +7,22 @@ return {
   opts = {},
   keys = {
     {
+      "<leader>fH",
+      function()
+        vim.g.fzf_show_hidden = not vim.g.fzf_show_hidden
+        vim.notify(
+          "FZF hidden files: " .. (vim.g.fzf_show_hidden and "ON" or "OFF"),
+          vim.log.levels.INFO
+        )
+      end,
+      desc = "Toggle hidden files for FZF",
+    },
+    {
       "<leader>ff",
       function()
         require("fzf-lua").files({
-          hidden = true,
-          no_ignore = true,
+          hidden = vim.g.fzf_show_hidden or false,
+          no_ignore = vim.g.fzf_show_hidden or false,
         })
       end,
       desc = "Find Files in project directory",
@@ -20,8 +31,8 @@ return {
       "<leader>fg",
       function()
         require("fzf-lua").live_grep({
-          hidden = true,
-          no_ignore = true,
+          hidden = vim.g.fzf_show_hidden or false,
+          no_ignore = vim.g.fzf_show_hidden or false,
         })
       end,
       desc = "Find by grepping in project directory",
