@@ -16,6 +16,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("<leader>cr", vim.lsp.buf.rename, "[R]e[n]ame")
     map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
     map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+    map("<leader><F1>", vim.lsp.buf.hover, "Code Help")
+    map("<C-F1>", vim.lsp.buf.signature_help, "Signature Help", { "n", "i" })
 
     local client = vim.lsp.get_client_by_id(event.data.client_id)
     if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) then
